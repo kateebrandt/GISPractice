@@ -8,9 +8,9 @@ library(rgdal)
 
 raw <- read_csv("data/HouseholdGeovariablesIHS4.csv")
 
-mw16_hh_geo <- raw %>% select(1:4) %>% filter((!is.na(lat_modified)) & 
+mw16_hh_geo <- raw %>% dplyr::select(1:4) %>% filter((!is.na(lat_modified)) & 
                                                 (!is.na(lon_modified))) %>%
-  mutate(pop = rnorm(nrow(mw16_hh_geo))) %>% select(-pop)
+  mutate(pop = rnorm(nrow(mw16_hh_geo))) %>% dplyr::select(-pop)
 
 ## convert geo file to spatial points data frame 
 
