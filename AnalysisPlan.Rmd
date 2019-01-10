@@ -1,17 +1,24 @@
 ---
-title: "The spatial and social clustering and diffusion of vaccine refusal: Analysis Notes, Planning, and Summary Document"
+title: 'The spatial and social clustering and diffusion of vaccine refusal: Analysis
+  Notes, Planning, and Summary Document'
 author: "Paul Delamater, Varun Goel, Kelsey Sumner, and Natalie Smith"
 date: "Created 06/01/2018"
-output: 
+output:
+  word_document:
+    toc: yes
+    toc_depth: '3'
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
   html_document:
-    toc: true
-    number_sections: false
-    toc_float:
-      collapsed: false
-      smooth_scroll: true
-    toc_depth: 3
-    theme: lumen
     highlight: default
+    number_sections: no
+    theme: lumen
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
 ---
 
 ```{r setup, include=FALSE}
