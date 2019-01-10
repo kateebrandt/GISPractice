@@ -3,12 +3,6 @@ title: "Variable Creation Outline Paper 1"
 author: "Kate Brandt"
 date: "January 9, 2019"
 output:
-  word_document:
-    toc: yes
-    toc_depth: '3'
-  pdf_document:
-    toc: yes
-    toc_depth: '3'
   html_document:
     highlight: default
     number_sections: no
@@ -18,6 +12,12 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+  word_document:
+    toc: yes
+    toc_depth: '3'
 ---
 
 ```{r setup, include=FALSE}
@@ -32,7 +32,8 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
 # This outline uses MARKET ACCESS as the example variable
 
 
-#1 Import LSMS (YEAR) spatial data as .csv
+#~~1 Import LSMS (2016-17) spatial data as .csv~~
+#~~2 Created LSMS (2016-17) HH location shapefile~~
 
 
 
