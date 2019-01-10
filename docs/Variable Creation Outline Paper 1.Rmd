@@ -1,0 +1,60 @@
+---
+title: "Variable Creation Outline Paper 1"
+author: "Kate Brandt"
+date: "January 9, 2019"
+output:
+  word_document:
+    toc: yes
+    toc_depth: '3'
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+  html_document:
+    highlight: default
+    number_sections: no
+    theme: lumen
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
+
+# Process to clean and create variables for paper to analyze land cover change and fuel use
+
+**The following is an outline of steps for creating and attaching variables to LSMS survey clusters for Malawi (years ??)**
+# This outline uses MARKET ACCESS as the example variable
+
+
+#1 Import LSMS (YEAR) spatial data as .csv
+
+
+
+#2 Import AfriPop data (YEARS) as #### file
+
+
+
+#3 Process AfriPop data
+  + Create density variable
+    ++ Population/Area (sq km)
+    ++ Choose threshold to qualify as "market" (e.g., 500 persons/sq km)
+    ++ Create binary variable: Market, not market
+    ++ Any contiguous area >XX sq km AND market = market (aggregating larger areas to reduce salt and pepper effect)
+    
+#4 Add 'MARKET ACCESS' variable to LSMS clusters
+ + Create variable column: 'MARKET ACCESS', values {yes, no}
+ + Search for geographically proximal markets to each cluster 
+ # Offset radius of LSMS clusters = XX km. 
+ + IF determined 'market' (from step 3) falls within 2*'offset radius', THEN LSMS cluster = "yes" for 'MARKET ACCESS'
+
+
+
+
+
+
