@@ -33,7 +33,7 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
 **Scripts and data may be accessed in GISPractice github**
 
 
-# MARKET ACCESS 
+# ~~MARKET ACCESS~~ 
   (shortest road distance from an IHS cluster to the nearest city, maybe weighted by night time lights)
   
   * **We need to ask Yu about this.  I don't think that this is the correct way to measure distance to markets using the data that we have?**
@@ -72,20 +72,24 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
   
   #3 Create density variable by extracting at location for POP DENSITY value (if it exists already)
   
-# ELEVATION
+# ~~ELEVATION~~
 
   #1 Download and import .tif of DEM
   
   #2 Extract DEM value at location point and create variable
   
-# SOIL QUALITY
+  * Going to use LSMS variables because they use SRTM
+  
+# ~~SOIL QUALITY~~
   
   * Not sure how this is going to be captured nor by which data set- need to ask Yu (check Pam data)
+  * Checked LSMS variables: using FAO, so we will use those already in LSMS
   
   
-# ACCESS TO WATER 
+# ~~ACCESS TO WATER~~ 
 
   * Not sure how this is going to be captured nor by which data set- need to ask Yu
+  * Should be usable from HH survey questions F38 and F36
 
 
 # URBAN (Using Night Time Lights) 
