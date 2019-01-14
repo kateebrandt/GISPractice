@@ -229,29 +229,71 @@ div.tocify {
 </div>
 
 
-<p>Last Updated 01/10/2019</p>
+<p>Last Updated 01/14/2019</p>
 <div id="process-to-clean-and-create-variables-for-paper-to-analyze-land-cover-change-and-fuel-use" class="section level1">
 <h1>Process to clean and create variables for paper to analyze land cover change and fuel use</h1>
-<p><strong>The following is an outline of steps for creating and attaching variables to LSMS survey clusters for Malawi (years ??)</strong> # This outline uses MARKET ACCESS as the example variable</p>
+<p><strong>The following is an outline of steps for creating and attaching variables (assigned to Kate and Varun) to LSMS survey clusters for Malawi</strong></p>
+<p><strong>Scripts and data may be accessed in GISPractice github</strong></p>
 </div>
-<div id="import-lsms-year-spatial-data-as-.csv" class="section level1">
-<h1><del>1 Import LSMS (YEAR) spatial data as .csv</del></h1>
-</div>
-<div id="import-afripop-data-years-as-file" class="section level1">
-<h1>2 Import AfriPop data (YEARS) as #### file</h1>
-</div>
-<div id="process-afripop-data" class="section level1">
-<h1>3 Process AfriPop data</h1>
+<div id="market-access" class="section level1">
+<h1>MARKET ACCESS</h1>
+<p>(shortest road distance from an IHS cluster to the nearest city, maybe weighted by night time lights)</p>
 <ul>
-<li>Create density variable ++ Population/Area (sq km) ++ Choose threshold to qualify as “market” (e.g., 500 persons/sq km) ++ Create binary variable: Market, not market ++ Any contiguous area &gt;XX sq km AND market = market (aggregating larger areas to reduce salt and pepper effect)</li>
+<li><strong>We need to ask Yu about this. I don’t think that this is the correct way to measure distance to markets using the data that we have?</strong></li>
+<li>Ans: We used the Malaria atlas access to cities database which includes road distance<a href="https://map.ox.ac.uk/research-project/accessibility_to_cities/">link here</a></li>
+<li>Variable is a distance unit</li>
+</ul>
+<p><strong>2016-2017 Data</strong></p>
+<p>#<del>1 Import LSMS (2016-17) spatial data as .csv</del></p>
+<p>#<del>2 Created LSMS (2016-17) HH location shapefile</del></p>
+<ul>
+<li>Output: /data/mw16_hh_geo_sp_wgs84 (main file to which variables are added)
+<ul>
+<li>Script: 01_process_lsms-mw-hh-geo-201617.R</li>
+</ul></li>
+</ul>
+<p>#<del>3 Download ‘Accessibility to cities (2015)’ and create accessibility variable</del></p>
+<ul>
+<li>Downloaded as .tif file</li>
+<li>Extracted value based on points; added as “access_to_city15_nobuff” variable</li>
+<li>Extracted mean value within 10km buffer; added as “access_to_city15_buff10k” variable
+<ul>
+<li>Script: 02_extract_accessibilitytoCities_MW1617.R</li>
+</ul></li>
 </ul>
 </div>
-<div id="add-market-access-variable-to-lsms-clusters" class="section level1">
-<h1>4 Add ‘MARKET ACCESS’ variable to LSMS clusters</h1>
+<div id="population-density" class="section level1">
+<h1>POPULATION DENSITY</h1>
+<p><strong>Within 10 km buffer of LSMS cluster</strong></p>
+<p>#1 Download and import AfriPop data for YEARS ####</p>
+<p>#2 Create density variable using average buffer value</p>
 <ul>
-<li>Create variable column: ‘MARKET ACCESS’, values {yes, no}</li>
-<li>Search for geographically proximal markets to each cluster # Offset radius of LSMS clusters = XX km.</li>
-<li>IF determined ‘market’ (from step 3) falls within 2*‘offset radius’, THEN LSMS cluster = “yes” for ‘MARKET ACCESS’</li>
+<li>Sum values for POPULATION of 10 km radius buffer</li>
+<li>Divide sum by area of buffer (2 * pi * 100 km)</li>
+</ul>
+<p>#3 Create density variable by extracting at location for POP DENSITY value (if it exists already)</p>
+</div>
+<div id="elevation" class="section level1">
+<h1>ELEVATION</h1>
+<p>#1 Download and import .tif of DEM</p>
+<p>#2 Extract DEM value at location point and create variable</p>
+</div>
+<div id="soil-quality" class="section level1">
+<h1>SOIL QUALITY</h1>
+<ul>
+<li>Not sure how this is going to be captured nor by which data set- need to ask Yu (check Pam data)</li>
+</ul>
+</div>
+<div id="access-to-water" class="section level1">
+<h1>ACCESS TO WATER</h1>
+<ul>
+<li>Not sure how this is going to be captured nor by which data set- need to ask Yu</li>
+</ul>
+</div>
+<div id="urban-using-night-time-lights" class="section level1">
+<h1>URBAN (Using Night Time Lights)</h1>
+<ul>
+<li>Not sure how this is going to be captured- need to ask Yu (ask Nick Lam about Masking , urban rural wisconsin data, NOAA urban mapping)</li>
 </ul>
 </div>
 
