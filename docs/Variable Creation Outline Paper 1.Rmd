@@ -28,33 +28,75 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
 
 # Process to clean and create variables for paper to analyze land cover change and fuel use
 
-**The following is an outline of steps for creating and attaching variables to LSMS survey clusters for Malawi (years ??)**
-# This outline uses MARKET ACCESS as the example variable
+**The following is an outline of steps for creating and attaching variables (assigned to Kate and Varun) to LSMS survey clusters for Malawi**
+
+**Scripts and data may be accessed in GISPractice github**
 
 
-#~~1 Import LSMS (2016-17) spatial data as .csv~~
-#~~2 Created LSMS (2016-17) HH location shapefile~~
+# MARKET ACCESS 
+  (shortest road distance from an IHS cluster to the nearest city, maybe weighted by night time lights)
+  
+  * **We need to ask Yu about this.  I don't think that this is the correct way to measure distance to markets using the data that we have?**
+  * Variable is a distance unit
+  
 
-
-
-#2 Import AfriPop data (YEARS) as #### file
-
-
-
-#3 Process AfriPop data
-  + Create density variable
-    ++ Population/Area (sq km)
-    ++ Choose threshold to qualify as "market" (e.g., 500 persons/sq km)
-    ++ Create binary variable: Market, not market
-    ++ Any contiguous area >XX sq km AND market = market (aggregating larger areas to reduce salt and pepper effect)
+  **2016-2017 Data**
+  
+  #~~1 Import LSMS (2016-17) spatial data as .csv~~
+  
+  #~~2 Created LSMS (2016-17) HH location shapefile~~
     
-#4 Add 'MARKET ACCESS' variable to LSMS clusters
- + Create variable column: 'MARKET ACCESS', values {yes, no}
- + Search for geographically proximal markets to each cluster 
- # Offset radius of LSMS clusters = XX km. 
- + IF determined 'market' (from step 3) falls within 2*'offset radius', THEN LSMS cluster = "yes" for 'MARKET ACCESS'
+  * Output: /data/mw16_hh_geo_sp_wgs84 (main file to which variables are added)
+    + Script: 01_process_lsms-mw-hh-geo-201617.R
+  
+
+  #~~3 Download 'Accessibility to cities (2015)' and create accessibility variable~~
+  
+  * Downloaded as .tif file
+  * Extracted value based on points; added as "access_to_city15_nobuff" variable
+  * Extracted mean value within 10km buffer; added as "access_to_city15_buff10k" variable
+    + Script: 02_extract_accessibilitytoCities_MW1617.R
+
+  
+  #4 Night time lights data variable
+  
+  * Process .tif of night time lights for YEARS ####-####
+  * Set threshold of ## as radiance that counts as "market/urban"
+  * Repeat step 3 to create variable that corroborates their distance variables
+  * Potential to weight based on night time lights?
+  
+# POPULATION DENSITY
+
+**Within 10 km buffer of LSMS cluster**
+
+  #1 Download and import AfriPop data for YEARS ####
+  
+  #2 Create density variable using average buffer value
+  
+  * Sum values for POPULATION of 10 km radius buffer
+  * Divide sum by area of buffer (2 * pi * 100 km)
+  
+  #3 Create density variable by extracting at location for POP DENSITY value (if it exists already)
+  
+# ELEVATION
+
+  #1 Download and import .tif of DEM
+  
+  #2 Extract DEM value at location point and create variable
+  
+# SOIL QUALITY
+  
+  * Not sure how this is going to be captured nor by which data set- need to ask Yu
+  
+  
+# ACCESS TO WATER 
+
+  * Not sure how this is going to be captured nor by which data set- need to ask Yu
 
 
+# URBAN (Using Night Time Lights)
+
+  * Not sure how this is going to be captured- need to ask Yu
 
 
 
