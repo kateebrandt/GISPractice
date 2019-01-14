@@ -235,13 +235,22 @@ div.tocify {
 <p>Last Updated 01/14/2019</p>
 <div id="process-to-clean-and-create-variables-for-paper-to-analyze-land-cover-change-and-fuel-use" class="section level1">
 <h1>Process to clean and create variables for paper to analyze land cover change and fuel use</h1>
+<<<<<<< HEAD
 <p><strong>The following is an outline of steps for creating and attaching variables to LSMS survey clusters for Malawi (years ??)</strong></p>
+=======
+<p><strong>The following is an outline of steps for creating and attaching variables (assigned to Kate and Varun) to LSMS survey clusters for Malawi</strong></p>
+<p><strong>Scripts and data may be accessed in GISPractice github</strong></p>
+>>>>>>> a139922a9c0c6fa6f00985dfed0f09a4da0511b4
 </div>
 <div id="market-access" class="section level1">
 <h1>MARKET ACCESS</h1>
 <p>(shortest road distance from an IHS cluster to the nearest city, maybe weighted by night time lights)</p>
 <ul>
 <li><strong>We need to ask Yu about this. I don’t think that this is the correct way to measure distance to markets using the data that we have?</strong></li>
+<<<<<<< HEAD
+=======
+<li>Ans: We used the Malaria atlas access to cities database which includes road distance<a href="https://map.ox.ac.uk/research-project/accessibility_to_cities/">link here</a></li>
+>>>>>>> a139922a9c0c6fa6f00985dfed0f09a4da0511b4
 <li>Variable is a distance unit</li>
 </ul>
 <p><strong>2016-2017 Data</strong></p>
@@ -262,6 +271,7 @@ div.tocify {
 <li>Script: 02_extract_accessibilitytoCities_MW1617.R</li>
 </ul></li>
 </ul>
+<<<<<<< HEAD
 <p>#4 Night time lights data variable</p>
 <ul>
 <li>Process .tif of night time lights for YEARS ####-####</li>
@@ -269,6 +279,8 @@ div.tocify {
 <li>Repeat step 3 to create variable that corroborates their distance variables</li>
 <li>Potential to weight based on night time lights?</li>
 </ul>
+=======
+>>>>>>> a139922a9c0c6fa6f00985dfed0f09a4da0511b4
 </div>
 <div id="population-density" class="section level1">
 <h1>POPULATION DENSITY</h1>
@@ -280,6 +292,7 @@ div.tocify {
 <li>Divide sum by area of buffer (2 * pi * 100 km)</li>
 </ul>
 <p>#3 Create density variable by extracting at location for POP DENSITY value (if it exists already)</p>
+<<<<<<< HEAD
 </div>
 <div id="elevation" class="section level1">
 <h1>ELEVATION</h1>
@@ -290,6 +303,18 @@ div.tocify {
 <h1>SOIL QUALITY</h1>
 <ul>
 <li>Not sure how this is going to be captured nor by which data set- need to ask Yu</li>
+=======
+</div>
+<div id="elevation" class="section level1">
+<h1>ELEVATION</h1>
+<p>#1 Download and import .tif of DEM</p>
+<p>#2 Extract DEM value at location point and create variable</p>
+</div>
+<div id="soil-quality" class="section level1">
+<h1>SOIL QUALITY</h1>
+<ul>
+<li>Not sure how this is going to be captured nor by which data set- need to ask Yu (check Pam data)</li>
+>>>>>>> a139922a9c0c6fa6f00985dfed0f09a4da0511b4
 </ul>
 </div>
 <div id="access-to-water" class="section level1">
@@ -301,7 +326,11 @@ div.tocify {
 <div id="urban-using-night-time-lights" class="section level1">
 <h1>URBAN (Using Night Time Lights)</h1>
 <ul>
+<<<<<<< HEAD
 <li>Not sure how this is going to be captured- need to ask Yu</li>
+=======
+<li>Not sure how this is going to be captured- need to ask Yu (ask Nick Lam about Masking , urban rural wisconsin data, NOAA urban mapping)</li>
+>>>>>>> a139922a9c0c6fa6f00985dfed0f09a4da0511b4
 </ul>
 </div>
 
