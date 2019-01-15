@@ -63,14 +63,13 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
 
 **Within 10 km buffer of LSMS cluster**
 
-  #1 Download and import AfriPop data for YEARS ####
+  ~~#1 Download and import AfriPop data for 2015~~
   
-  #2 Create density variable using average buffer value
+  ~~#2 Create density variable using summing buffer values~~
   
-  * Sum values for POPULATION of 10 km radius buffer
-  * Divide sum by area of buffer (2 * pi * 100 km)
+  * ~~Sum values for POPULATION of 10 km radius buffer~~
+  * Divide sum by area of buffer
   
-  #3 Create density variable by extracting at location for POP DENSITY value (if it exists already)
   
 # ~~ELEVATION~~
 
