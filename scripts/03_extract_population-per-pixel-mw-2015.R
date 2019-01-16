@@ -22,8 +22,7 @@ identicalCRS(hh_geo,popden)
 #                                                                   fun = mean,
 #                                                                     ))
 
-##store data on drive
-#write_rds(x = hh_geo,path="data/hhgeo_w_calculated_access.rds",compress = "gz")
+
 
 ### buffering takes a long time
 # run over small set
@@ -34,5 +33,12 @@ for(i in seq(1,nrow(hh_geo),by=102)){
                     buffer = 10000, fun = sum)
   print(i)
 }
+
+## divide popden by 10 km sq
+hh_geo@data %<>% mutate(popden_buff10k = popden_buff10k/(100*pi))
+
+##store data on drive
+write_rds(x = hh_geo,path="data/hhgeo_w_popden10k.rds",compress = "gz")
+
 
 
