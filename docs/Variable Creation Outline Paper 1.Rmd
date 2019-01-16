@@ -32,6 +32,74 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
 
 **Scripts and data may be accessed in GISPractice github**
 
+**YEARS Checkoff list**
+
+  2016-17
+  
+  * ~~MARKET ACCESS~~
+  
+  * POPULATION DENSITY
+  
+  * ~~ELEVATION~~
+  
+  * ~~SOIL QUALITY~~
+  
+  * ~~ACCESS TO WATER~~
+  
+  * ~~ACCESS TO ELECTRICITY~~
+  
+  * URBAN
+  
+  2013
+  
+  * MARKET ACCESS
+  
+  * POPULATION DENSITY
+  
+  * ~~ELEVATION~~
+  
+  * ~~SOIL QUALITY~~
+  
+  * ~~ACCESS TO WATER~~
+  
+  * ~~ACCESS TO ELECTRICITY~~
+  
+  * URBAN
+  
+  2010
+  
+  * MARKET ACCESS
+  
+  * POPULATION DENSITY
+  
+  * ~~ELEVATION~~
+  
+  * ~~SOIL QUALITY~~
+  
+  * ~~ACCESS TO WATER~~
+  
+  * ~~ACCESS TO ELECTRICITY~~
+  
+  * URBAN
+  
+  2004
+  
+  * MARKET ACCESS
+  
+  * POPULATION DENSITY
+  
+  * ~~ELEVATION~~
+  
+  * ~~SOIL QUALITY~~
+  
+  * ~~ACCESS TO WATER~~
+  
+  * ~~ACCESS TO ELECTRICITY~~
+  
+  * URBAN
+
+
+# Variable  creation process (described for 2016-17 LSMS set)
 
 # ~~MARKET ACCESS~~ 
   (shortest road distance from an IHS cluster to the nearest city, maybe weighted by night time lights)
@@ -94,6 +162,9 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
 # URBAN (Using Night Time Lights) 
 
   * Not sure how this is going to be captured- need to ask Yu (ask Nick Lam about Masking , urban rural wisconsin data, NOAA urban mapping)
+  * Reach out to Dr. Schneider at UWisco
+  * Process according to global index or regional across SSA?
+  
 
 
 
