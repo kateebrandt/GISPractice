@@ -42,10 +42,10 @@ hh_geo_proj@data %<>% mutate(popden_buff10k = NA)
 
 hh_geo_proj@data$popden_buff10k
 ## divide popden by 10 km sq
-hh_geo@data %<>% mutate(popden_buff10k = popden_buff10k/(100*pi))
+hh_geo_proj@data %<>% mutate(popden_buff10k = popden_buff10k/(100*pi))
 
 ##store data on drive
-write_rds(x = hh_geo,path="data/hhgeo10_w_popden10k.rds",compress = "gz")
+write_rds(x = hh_geo_proj,path="data/hhgeo10_w_popden10k.rds",compress = "gz")
 
 
 

@@ -68,9 +68,9 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
   
   2010
   
-  * ~~MARKET ACCESS~~ (Completed and uploaded 1/30)
+  * ~~MARKET ACCESS~~ (Completed and uploaded 1/30 - hhgeo10_w_calculated_access.rds) KB
   
-  * POPULATION DENSITY
+  * ~~POPULATION DENSITY~~ (Completed and uploaded 1/30 - hhgeo10_w_popden10k.rds) KB
   
   * ~~ELEVATION~~
   
