@@ -23,23 +23,17 @@ identicalCRS(hh_geo,access)
 #                                                                   fun = mean,
 #                                                                     ))
 
-##store data on drive
-write_rds(x = hh_geo,path="data/hhgeolonpan_w_calculated_access.rds",compress = "gz")
-
 ### buffering takes a long time
 # run over small set
 hh_geo@data %<>% mutate(access_to_city15_buff10k = NA)
-for(i in seq(1,nrow(hh_geo),by=102)){
-  hh_geo@data[i:(i+101),"access_to_city15_buff10k"] <-
-    raster::extract(access, hh_geo[i:(i+101),],
+for(i in 1:1619){
+  hh_geo@data[i,"access_to_city15_buff10k"] <-
+    raster::extract(access, hh_geo[i,],
                     buffer = 10000, fun = mean)
   print(i)
 }
 
-### Feb 4 - For some reason, not calculating last 89?
-
-
-access2cities10_13_16 <- raster::extract(access, hh_geo)
+write_rds(x = hh_geo,path="data/hhgeolonpan_w_calculated_access.rds",compress = "gz")
 
 ## Check output
 hh_geo@data[1:20,]
