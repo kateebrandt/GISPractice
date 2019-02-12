@@ -4,12 +4,6 @@ title: 'The spatial and social clustering and diffusion of vaccine refusal: Anal
 author: "Paul Delamater, Varun Goel, Kelsey Sumner, and Natalie Smith"
 date: "Created 06/01/2018"
 output:
-  word_document:
-    toc: yes
-    toc_depth: '3'
-  pdf_document:
-    toc: yes
-    toc_depth: '3'
   html_document:
     highlight: default
     number_sections: no
@@ -19,6 +13,12 @@ output:
     toc_float:
       collapsed: no
       smooth_scroll: yes
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+  word_document:
+    toc: yes
+    toc_depth: '3'
 ---
 
 ```{r setup, include=FALSE}
