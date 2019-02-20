@@ -1,13 +1,13 @@
 # KB
 # February 20 2019
-# Merging popden and access to cities variables for 16-17 data
+# Merging popden and access to cities variables for 2010 data
 
 library(dplyr)
 library(base)
 library(plyr)
 # read files to be merged into data frame format
 
-access <- data.frame(readRDS("./data/hhgeo10_w_calculated_access.rds"))
+access10 <- data.frame(readRDS("./data/hhgeo10_w_calculated_access.rds"))
 popden <- data.frame(readRDS("./data/hhgeo10_w_popden10k.rds"))
 
 # copy popden10k column to main data frame

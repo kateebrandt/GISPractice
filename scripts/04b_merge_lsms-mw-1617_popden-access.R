@@ -6,7 +6,7 @@ library(dplyr)
 
 # read files to be merged into data frame format
 
-access <- data.frame(readRDS("./data/hhgeo_w_calculated_access.rds"))
+access1617 <- data.frame(readRDS("./data/hhgeo_w_calculated_access.rds"))
 popden <- data.frame(readRDS("./data/hhgeo_w_popden10k (1).rds"))
 
 # copy popden10k column to main data frame

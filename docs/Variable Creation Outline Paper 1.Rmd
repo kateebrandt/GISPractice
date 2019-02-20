@@ -55,10 +55,13 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
   
   2013
   
+  Merged variables file uploaded to teams - KB 2/20
+  
   * ~~MARKET ACCESS~~ (Completed and uploaded 2/4 - hhgeolonpan_w_calculated_access.rds) KB
   
   * ~~POPULATION DENSITY~~ (Completed and uploaded 2/4 - hhgeolonpan_w_popden10k.rds) KB
-    + Used 2010 AfriPop Data
+    + Used 2010 and 2015 AfriPop Data
+    + Created average popden variable for 2013 data points (completed 2/20 - KB)
   
   * ~~ELEVATION~~ (from LSMS)
   
