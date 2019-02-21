@@ -6,10 +6,10 @@
 library(tidyverse)
 library(rgdal)
 
-raw <- read_csv("data/householdgeovariablesIHS3.csv")
+raw <- read_csv("./data/householdgeovariablesIHS3.csv")
 
 mw10_hh_geo <- raw %>% dplyr::select(1:4) %>% filter((!is.na(lat_modified)) & 
-                                                       (!is.na(lon_modified))) %>%
+                                                       (!is.na(lon_modified)))
 
 ## rename columns so there's no writeOGR truncation error
   colnames(mw10_hh_geo)[colnames(mw10_hh_geo)=="lat_modified"] <- "lat"
