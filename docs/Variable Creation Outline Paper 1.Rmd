@@ -55,16 +55,25 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
   
   Long Panel: 2010-2013
   
+  Merged variables in teams (3/6 - KB)
+  
+  hhgeolpy1_mw_lsms.csv
+  
+  hhgeolpy2_mw_lsms.csv
+  
+  hhgeolpy3_mw_lsms.csv
   
   
-  * MARKET ACCESS
+  * ~~MARKET ACCESS~~
     + hhgeolpy1_w_calculated_access.rds (completed 3/6 - KB)
     + hhgeolpy2_w_calculated_access.rds (completed 3/6 - KB)
     + hhgeolpy3_w_calculated_access.rds (completed 3/6 - KB)
   
   * POPULATION DENSITY
     + Used 2010 and 2015 AfriPop Data
-    + 
+    + Year 1, using 2010 data only: hhgeolpy1_w_popden10k.rds (completed 3/6 - KB) 
+    + Year 2, using 2010 and 2015 data to average for 2013 estimate: hhgeolpy2_w_popden10k_10_13_15.rds (completed 3/6 - KB)
+    + Year 3, using 2015 data only: hhgeolpy3_w_popden10k_15.rds (completed 3/6 - KB)
   
   * ~~ELEVATION~~ (from LSMS)
   
@@ -170,7 +179,11 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
   
   * 01,b,c: processes geopoints to create shapefile for extraction in future steps
   
-  * 02,b,c: extract access to cities from 2015 access raster
+  * 02,b,c: extract access to cities from 2015 access raster, 10 km buffer
+  
+  * 03,b,c: extract population densities from AfriPop data, 10 km buffer
+  
+  * 04,b,c: merge geovariables to one final csv file to send back to Yu (access and popden variables)
   
 
 
