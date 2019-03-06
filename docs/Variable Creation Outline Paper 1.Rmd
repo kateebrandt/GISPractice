@@ -92,21 +92,6 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
   
   * URBAN
   
-  2004 (need to locate geovariables file? 2/4 KB)
-  
-  * MARKET ACCESS
-  
-  * POPULATION DENSITY
-  
-  * ~~ELEVATION~~ (from LSMS)
-  
-  * ~~SOIL QUALITY~~ (from LSMS)
-  
-  * ~~ACCESS TO WATER~~ (from LSMS)
-  
-  * ~~ACCESS TO ELECTRICITY~~ (from LSMS)
-  
-  * URBAN
 
 
 # Variable  creation process (described for 2016-17 LSMS set)
@@ -176,6 +161,9 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
   * Process according to global index or regional across SSA?
   
 
+# Scripts
 
+  * 00_file-origins_mwlsms.R: gives names of original files for processing
+  
 
 
