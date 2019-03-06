@@ -12,3 +12,4 @@ mw_lsms_cs_1617 <- read.csv("./data/HouseholdGeovariablesIHS4.csv")
 mw_lsms_pan10_y1 <- read.csv("./data/2010y1panel.csv")
 mw_lsms_pan13_y2 <- read.csv("./data/2013y2panel.csv")
 mw_lsms_pan16_y3 <- read_dta("./data/2016y3panel.dta")
+

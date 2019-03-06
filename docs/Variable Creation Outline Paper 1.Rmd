@@ -53,15 +53,18 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
   
   * URBAN
   
-  2013
+  Long Panel: 2010-2013
   
-  Merged variables file uploaded to teams - KB 2/20
   
-  * ~~MARKET ACCESS~~ (Completed and uploaded 2/4 - hhgeolonpan_w_calculated_access.rds) KB
   
-  * ~~POPULATION DENSITY~~ (Completed and uploaded 2/4 - hhgeolonpan_w_popden10k.rds) KB
+  * MARKET ACCESS
+    + hhgeolpy1_w_calculated_access.rds (completed 3/6 - KB)
+    + hhgeolpy2_w_calculated_access.rds (completed 3/6 - KB)
+    + hhgeolpy3_w_calculated_access.rds (completed 3/6 - KB)
+  
+  * POPULATION DENSITY
     + Used 2010 and 2015 AfriPop Data
-    + Created average popden variable for 2013 data points (completed 2/20 - KB)
+    + 
   
   * ~~ELEVATION~~ (from LSMS)
   
@@ -164,6 +167,10 @@ Last Updated `r format(Sys.Date(), format="%m/%d/%Y")`
 # Scripts
 
   * 00_file-origins_mwlsms.R: gives names of original files for processing
+  
+  * 01,b,c: processes geopoints to create shapefile for extraction in future steps
+  
+  * 02,b,c: extract access to cities from 2015 access raster
   
 
 
