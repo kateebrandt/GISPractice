@@ -22,10 +22,11 @@ bounding.box.xy()
   library(rgdal)
   library(magrittr)
   library(tidyverse)
+  library(stars)
 
-  mwhhgeo10 <- hh_geo <- readOGR(dsn = "./data",layer = "mw16_hh_geo_sp_wgs84")
+  mwhhgeo16 <- hh_geo <- readOGR(dsn = "./data",layer = "mw16_hh_geo_sp_wgs84")
   
-  bound <- bounding.box.xy(mwhhgeo10@coords)
+  bound <- bounding.box.xy(mwhhgeo16@coords)
   
   hansen1 <- raster("C:/Users/kbran/OneDrive/Documents/R/paper1/datamask_00N_030E.tif")
   hansen2 <- raster("C:/Users/kbran/OneDrive/Documents/R/paper1/datamask_10S_030E.tif")
