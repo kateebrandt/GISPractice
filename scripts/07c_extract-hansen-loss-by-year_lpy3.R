@@ -7,9 +7,9 @@ library(raster)
 library(dplyr)
 library(tidyverse)
 
-# (1) Cross section - 20116-2017 
+# (1) Panel Y3 2016-2017
 
-hh_geo <- readOGR(dsn = "./data",layer = "mw16_hh_geo_sp_wgs84 (1)")
+hh_geo <- readOGR(dsn = "./data",layer = "mwlpy3_hh_geo_sp_wgs84")
 
 ###########################################################################################
 #############################################################################
@@ -33,7 +33,7 @@ hh_geo@data %>% mutate(loss07_10k = NA, loss08_10k = NA, loss09_10k = NA, loss10
                        loss12_50k = NA, loss13_50k = NA, loss14_50k = NA, loss15_50k = NA, loss16_50k = NA,
                        loss17_50k = NA)
 #Select all cells = 7
-for(i in 1:12444){
+for(i in 1:2503){
   hh_geo@data[i,"loss07_10k"] <-
     raster::extract(lossyr07, hh_geo[i,],
                     buffer = 10000, fun = sum)
@@ -131,4 +131,4 @@ hh_geo@data %>% mutate(loss07_10km = loss07_10k*900,
                        loss17_50km = loss17_50k*900)
 
 ##store data on drive
-write_rds(x = hh_geo,path="data/hhgeo11617_loss10k_50k.rds",compress = "gz")
+write_rds(x = hh_geo,path="data/hhgeolpy3_loss10k_50k.rds",compress = "gz")
