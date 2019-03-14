@@ -4,14 +4,14 @@
 ## Extract each year of loss by points
 library(rgdal)
 library(raster)
-library(dplyr)
+#library(dplyr)
 library(tidyverse)
 
 
 dat <- data.frame(yo =1:10, lo = 20:29)
 # (1) Cross section - 20116-2017 
 dataset_name = "MW_16"
-hh_geo <- readOGR(dsn = "./data",layer = "mw16_hh_geo_sp_wgs84 (1)")
+hh_geo <- readOGR(dsn = "./data",layer = "mw16_hh_geo_sp_wgs84")
 buff = 10000
 year = "07"
 ###########################################################################################
