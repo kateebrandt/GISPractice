@@ -21,8 +21,6 @@ lossyr <- raster("./data/loss07.tif")
 pixcolname <- paste0("loss",year,"_",(buff/1000),"k_nop")
 areacolname <-paste0("loss",year,"_",(buff/1000),"k_area")
 
-hh_geo@data %>% mutate(calc_pix = NA)
-names(hh_geo@data)[grep("calc_pix",names(hh_geo@data))] <- pixcolname
 #Select all cells = 7
 
 calc_pix <- raster::extract(lossyr, hh_geo,
