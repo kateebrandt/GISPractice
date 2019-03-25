@@ -28,3 +28,15 @@ mw16un_hh_geo_sp <- SpatialPointsDataFrame(coords = as.matrix(hhgeo16_pts[,c(2,1
                                            proj4string = CRS("+init=epsg:4326"))
 
 writeOGR(mw16un_hh_geo_sp, dsn = "data", "mw16un_hh_geo_sp_wgs84", driver = "ESRI Shapefile", overwrite_layer = T)
+
+
+hhgeoy3 <- readOGR(dsn = "./data", layer = "mwlpy3_hh_geo_sp_wgs84")
+hhgeoy3 <- hhgeoy3@data
+hhgeoy3_pts <- unique(hhgeoy3[,c(2,3,8)])
+hhgeoy3_pts <- hhgeoy3_pts %>% mutate(id = 1:716)
+
+mwlpy3un_hh_geo_sp <- SpatialPointsDataFrame(coords = as.matrix(hhgeoy3_pts[,c(2,1)]),
+                                           data = hhgeoy3_pts,
+                                           proj4string = CRS("+init=epsg:4326"))
+
+writeOGR(mwlpy3un_hh_geo_sp, dsn = "data", "mwlpy3un_hh_geo_sp_wgs84", driver = "ESRI Shapefile", overwrite_layer = T)
