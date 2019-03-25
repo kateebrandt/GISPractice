@@ -80,6 +80,28 @@ mwlpy_loss <- cbind(hhgeo@data, y07, y08, y09, y10, y11, y12, y13, y14, y15, y16
 write.csv(mwlpy_loss, "./data/mwlpy3_loss10k.csv")
 
 
+## LONG PANEL YEAR 3 - 50k
+y07 <- data.frame(readRDS("./data/MW_LPY3_07_50.rds"))
+y08 <- data.frame(readRDS("./data/MW_LPY3_08_50.rds"))
+y09 <- data.frame(readRDS("./data/MW_LPY3_09_50.rds"))
+y10 <- data.frame(readRDS("./data/MW_LPY3_10_50.rds"))
+y11 <- data.frame(readRDS("./data/MW_LPY3_11_50.rds"))
+y12 <- data.frame(readRDS("./data/MW_LPY3_12_50.rds"))
+y13 <- data.frame(readRDS("./data/MW_LPY3_13_50.rds"))
+y14 <- data.frame(readRDS("./data/MW_LPY3_14_50.rds"))
+y15 <- data.frame(readRDS("./data/MW_LPY3_15_50.rds"))
+y16 <- data.frame(readRDS("./data/MW_LPY3_16_50.rds"))
+y17 <- data.frame(readRDS("./data/MW_LPY3_17_50.rds"))
+
+hhgeo <- readOGR(dsn = "./data", layer = "mwlpy3un_hh_geo_sp_wgs84")
+hhgeo_full <- readOGR(dsn = "./data", layer = "mwlpy3_hh_geo_sp_wgs84")
+hhgeo_full <- hhgeo_full@data
+mwlpy_loss <- cbind(hhgeo@data, y07, y08, y09, y10, y11, y12, y13, y14, y15, y16, y17)
+mwlpy3mer <- merge(hhgeo_full, mwlpy_loss, by = c("lat", "lon", "ea_id"))
+mwlpy3mer <- mwlpy3mer[,-12]
+write.csv(mwlpy3mer, "./data/mwlpy3_loss50k.csv")
+
+
 ## CROSS SECTION - 2016/17
 y07 <- data.frame(readRDS("./data/MW_16_07_10.rds"))
 y08 <- data.frame(readRDS("./data/MW_16_08_10.rds"))
