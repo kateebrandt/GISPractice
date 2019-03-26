@@ -1,5 +1,5 @@
 ## KB
-## March 22 
+## March 26
 ## Code from VG to use ncdf files
 
 library(raster)
@@ -12,3 +12,6 @@ fname <-"C:/Users/kbran/OneDrive/Documents/GISPractice/data/climate/cru_ts4.01.2
 r <- stack(fname) # read all rasters together
 print(r[[1]]) ## check metadata
 res <- ncdf4::nc_open(nc_path) ## will store all files as netcdf if you are into that sort of stuff....
+a <- r$X2011.03.16
+
+b <- r$
