@@ -21,6 +21,9 @@ bounding.box.xy()
   mwhhgeo16 <- hh_geo <- readOGR(dsn = "./data",layer = "mw16_hh_geo_sp_wgs84")
   
   bound <- bounding.box.xy(mwhhgeo16@coords)
+  bound
+  #rectangle = [32.85958, 35.85383] x [-17.09515, -9.429667] units
+  # (1) closer to 0, (2) further from 0, (3) further from 0, (4) closer to 0
 ####  
   ## Create data mask raster
   hansen1 <- raster("./data/datamask_00N_030E.tif")

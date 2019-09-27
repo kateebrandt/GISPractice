@@ -12,7 +12,7 @@ access <- raster("data/accessibility_to_cities_2015_v1.0/accessibility_to_cities
 ## load malawi hh point shp
 hh_geo <- readOGR(dsn = "./data",layer = "mw16_hh_geo_sp_wgs84")
 
--## check if CRS is same for both
+## check if CRS is same for both
 identicalCRS(hh_geo,access)
 
 #extract and mutate access data to hh geo

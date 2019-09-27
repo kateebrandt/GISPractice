@@ -1,5 +1,5 @@
 ## KB
-## March 24 2019
+## June 12  2019
 ## Extract tree cover in buffers surrounding points
 ## Extract each year of loss by points
 library(rgdal)
@@ -7,11 +7,11 @@ library(raster)
 #library(dplyr)
 library(tidyverse)
 
-## JOB 42 - 2015 loss, 50k buffer, LPY3  data
-# (1) LONG PANEL YEAR 3
-dataset_name = "MW_LPY3"
-hh_geo <- readOGR(dsn = "./data",layer = "mwlpy3un_hh_geo_sp_wgs84")
-buff = 50000
+## JOB 1 - 2007 loss, 5k buffer, 2010  data
+# (1) 2010
+dataset_name = "MW_10"
+hh_geo <- readOGR(dsn = "./data",layer = "mw10un_hh_geo_sp_wgs84")
+buff = 5000
 year = "07"
 ###########################################################################################
 #############################################################################

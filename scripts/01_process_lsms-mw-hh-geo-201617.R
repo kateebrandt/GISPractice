@@ -6,7 +6,7 @@
 library(tidyverse)
 library(rgdal)
 
-raw <- read_csv("data/HouseholdGeovariablesIHS4.csv")
+raw <- read_dta("data/raw/HouseholdGeovariables_stata11/HouseholdGeovariablesIHS4.dta")
 
 mw16_hh_geo <- raw %>% dplyr::select(1:4) %>% filter((!is.na(lat_modified)) & 
                                                 (!is.na(lon_modified))) %>%
